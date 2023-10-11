@@ -1,0 +1,7 @@
+{
+  "name": "MyMenu",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
