@@ -6,7 +6,11 @@ module.exports = {
     "./node_modules/primevue/**/*.{vue,js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        display: 'Oswald, ui-serif', // Adds a new `font-display` class
+      }
+    },
   },
   plugins: [],
 }

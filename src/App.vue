@@ -1,7 +1,5 @@
 <template>
-  <div>
-    teste
-    <Cabeca />
+  <div class="h-screen bg-green-500">
     <Login />
   </div>
 </template>
@@ -18,10 +16,3 @@ export default {
   },
 };
 </script>
-
-<style>
-    .app{
-        background: #fff;
-    }
-
-</style>
