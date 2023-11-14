@@ -7,7 +7,7 @@
           v-model="username"
           type="text"
           class="w-full px-3 py-2 border rounded"
-          placeholder="Username"
+          placeholder="Email"
         />
       </div>
       <div class="mb-4">
@@ -15,7 +15,7 @@
           v-model="password"
           type="password"
           class="w-full px-3 py-2 border rounded"
-          placeholder="Password"
+          placeholder="Senha"
         />
       </div>
       <button
@@ -23,6 +23,12 @@
         class="w-full bg-blue-500 text-white font-semibold py-2 rounded hover:bg-blue-600"
       >
         Login
+      </button>
+      <button
+        @click="cadastro"
+        class="w-full bg-blue-500 text-white font-semibold py-2 rounded hover:bg-blue-600"
+      >
+        Cadastro
       </button>
     </div>
   </div>
@@ -37,5 +43,10 @@ export default {
     InputText,
     InputWrapper,
   },
+  methods:{
+    cadastro(){
+      this.$router.push({name:'api'});
+    }
+  }
 };
 </script>
