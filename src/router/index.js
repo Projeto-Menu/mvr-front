@@ -2,9 +2,17 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
-    path: '/',
+    path: '/cardapio',
+    name: "Cardapio",
+    component: () => import("@/views/Cardapio.vue"),
+    meta: {
+      name: "Cardapio",
+    },
+  },
+  {
+    path: '/login',
     name: "Login",
-    component: () => import("../views/Registro/Login.vue"),
+    component: () => import("@/views/Registro/Login.vue"),
     meta: {
       name: "Login",
     },
@@ -12,7 +20,7 @@ const routes = [
   {
     path: '/cadastro',
     name: "Cadastro", 
-    component: () => import("../views/Registro/Cadastro.vue"),
+    component: () => import("@/views/Registro/Cadastro.vue"),
     meta: {
       name: "Cadastro",
     },
@@ -20,7 +28,7 @@ const routes = [
   {
     path: '/api',
     name: "api",
-    component: () => import("../views/TesteApi.vue"),
+    component: () => import("@/views/TesteApi.vue"),
     meta: {
       name: "api",
     },

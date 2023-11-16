@@ -29,6 +29,8 @@ module.exports = {
     ],
     "rules": {
         'vue/no-unused-components':0,
-        'vue/multi-word-component-names':0
+        'vue/multi-word-component-names':0,
+        'vue/no-reserved-component-names':0,
+        'no-useless-catch':0,
     }
 }

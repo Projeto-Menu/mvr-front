@@ -1,32 +1,26 @@
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-gray-100">
-    <div class="bg-white p-8 rounded shadow-md">
-      <h2 class="text-2xl font-semibold mb-4">Login</h2>
+  <div class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-teal-500">
+    <div class="bg-white p-8 rounded shadow-md w-96">
+      <h2 class="text-2xl font-semibold mb-4 text-center text-gray-800">Login</h2>
       <div class="mb-4">
-        <input
-          v-model="username"
-          type="text"
-          class="w-full px-3 py-2 border rounded"
-          placeholder="Email"
-        />
+        <InputWrapper label="Email">
+          <InputText v-model="username" placeholder="Email" class="p-2"/>
+        </InputWrapper>
       </div>
       <div class="mb-4">
-        <input
-          v-model="password"
-          type="password"
-          class="w-full px-3 py-2 border rounded"
-          placeholder="Senha"
-        />
+        <InputWrapper label="Senha">
+          <InputText v-model="password" type="password" placeholder="Senha" class="p-2" />
+        </InputWrapper>
       </div>
       <button
         @click="login"
-        class="w-full bg-blue-500 text-white font-semibold py-2 rounded hover:bg-blue-600"
+        class="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition duration-300"
       >
-        Login
+        Entrar
       </button>
       <button
         @click="cadastro"
-        class="w-full bg-blue-500 text-white font-semibold py-2 rounded hover:bg-blue-600"
+        class="w-full bg-green-500 text-white font-semibold py-2 mt-2 rounded hover:bg-green-600 transition duration-300"
       >
         Cadastro
       </button>
@@ -43,10 +37,22 @@ export default {
     InputText,
     InputWrapper,
   },
-  methods:{
-    cadastro(){
-      this.$router.push({name:'api'});
-    }
-  }
+  data() {
+    return {
+      form: {
+        username: null,
+        email: null,
+      },
+    };
+  },
+  methods: {
+    login() {
+      // Adicione lógica de autenticação aqui
+      console.log("Login realizado:", this.username);
+    },
+    cadastro() {
+      this.$router.push({ name: "Cadastro" });
+    },
+  },
 };
 </script>
