@@ -1,42 +1,45 @@
 <template>
-  <form
-    @submit.prevent="submitForm"
-    class="min-h-screen flex items-center justify-center bg-gray-100"
-  >
-    <div class="bg-white p-8 rounded shadow-md">
-      <h2 class="text-2xl font-semibold mb-4">Cadastro</h2>
-      <InputWrapper>
-        <InputText
-          v-model="form.username"
-          type="text"
-          class="w-full px-3 py-2 border rounded"
-          placeholder="User Name"
-        />
-      </InputWrapper>
-      <InputWrapper>
-        <InputText
-          v-model="form.email"
-          type="text"
-          class="w-full px-3 py-2 border rounded"
-          placeholder="Email"
-        />
-      </InputWrapper>
-      <InputWrapper>
-        <InputText
-          v-model="form.senha"
-          type="password"
-          placeholder="Senha"
-          class="w-full px-3 py-2 border rounded"
-        />
-      </InputWrapper>
+  <div class="min-h-screen flex flex-col">
+    <Header />
+    <form
+      @submit.prevent="submitForm"
+      class="flex-1 flex items-center justify-center bg-gray-100"
+    >
+      <div class="bg-white p-8 rounded shadow-md w-96">
+        <h2 class="text-2xl font-semibold mb-4">Cadastro</h2>
+        <InputWrapper>
+          <InputText
+            v-model="form.username"
+            type="text"
+            class="w-full px-3 py-2 border rounded"
+            placeholder="User Name"
+          />
+        </InputWrapper>
+        <InputWrapper>
+          <InputText
+            v-model="form.email"
+            type="text"
+            class="w-full px-3 py-2 border rounded"
+            placeholder="Email"
+          />
+        </InputWrapper>
+        <InputWrapper>
+          <InputText
+            v-model="form.senha"
+            type="password"
+            placeholder="Senha"
+            class="w-full px-3 py-2 border rounded"
+          />
+        </InputWrapper>
 
-      <Button
-        type="submit"
-        label="Confirmar"
-        class="w-full bg-blue-500 text-white font-semibold py-2 rounded hover:bg-blue-600"
-      />
-    </div>
-  </form>
+        <Button
+          type="submit"
+          label="Confirmar"
+          class="w-full bg-blue-500 text-white font-semibold py-2 rounded hover:bg-blue-600"
+        />
+      </div>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -57,7 +60,7 @@ export default {
       form: {
         username: null,
         email: null,
-        senha: null
+        senha: null,
       },
     };
   },

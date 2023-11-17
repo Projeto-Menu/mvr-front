@@ -1,19 +1,20 @@
 <template>
   <div>
-    <Header/>
+    <Header />
   </div>
 </template>
 
 <script>
-import Header from '../components/Header.vue';
+import Menu from "primevue/menu";
 
 export default {
-  components:{
-    Header,
+  components: {
+    Menu,
   },
   data() {
     return {
-      users: [],
+      menu: null,
+      items: null,
     };
   },
   mounted() {
@@ -21,7 +22,7 @@ export default {
   },
   methods: {
     async requisicao() {
-      console.log('teste')
+      console.log("teste");
     },
   },
 };
