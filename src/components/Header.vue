@@ -1,13 +1,10 @@
 <template>
-  <header class="bg-blue-500 text-white p-4">
-    <div class="container mx-auto flex items-center">
-      <button @click="toggleSidebar" class="text-xl text-blue-400">
+  <header class="bg-blue-800 text-white h-16 flex items-center pl-5">
+      <button @click="toggleSidebar" class="text-xl text-green-400">
         &#9776;
       </button>
-
       <router-link to="/" class="text-xl font-bold ml-2">My Menu</router-link>
       <SidebarMenu :visible="sidebarVisible" @close="closeSidebar" />
-    </div>
   </header>
 </template>
 
@@ -34,6 +31,3 @@ export default {
 };
 </script>
 
-<style scoped>
-/* Adicione estilos específicos do componente aqui, se necessário */
-</style>

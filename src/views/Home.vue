@@ -1,19 +1,19 @@
 <template>
   <div>
     <Header />
+    <Cardapio/>
   </div>
 </template>
 
 <script>
-import Menu from "primevue/menu";
+import Cardapio from '../components/Cardapio.vue';
 
 export default {
   components: {
-    Menu,
+    Cardapio,
   },
   data() {
     return {
-      menu: null,
       items: null,
     };
   },
