@@ -4,7 +4,7 @@
         &#9776;
       </button>
       <router-link to="/" class="text-xl font-bold ml-2">My Menu</router-link>
-      <SidebarMenu :visible="sidebarVisible" @close="closeSidebar" />
+      <SidebarMenu :visible="sidebarVisible"/>
   </header>
 </template>
 
@@ -23,9 +23,7 @@ export default {
   methods: {
     toggleSidebar() {
       this.sidebarVisible = !this.sidebarVisible;
-    },
-    closeSidebar() {
-      this.sidebarVisible = false;
+      this.$emit("toggle-sidebar");
     },
   },
 };

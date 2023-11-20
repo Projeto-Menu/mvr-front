@@ -5,7 +5,6 @@
       <p class="text-2xl font-semibold">Semana</p>
       <p class="text-lg">De {{ semanaInfo }}</p>
     </div>
-
     <!-- Nova seção para o Dia da Semana -->
     <div class="mt-4 text-white">
       <p class="text-2xl font-semibold">Dia da Semana</p>
@@ -48,9 +47,6 @@ export default {
     };
   },
   methods: {
-    closeSidebar() {
-      this.$emit("close");
-    },
     obterSemanaAtual() {
       const hoje = new Date();
       const inicioDaSemana = startOfWeek(hoje, { weekStartsOn: 1 }); // Onde 1 é segunda-feira
