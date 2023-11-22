@@ -1,7 +1,9 @@
 <template>
   <div :class="{ 'ml-60': isSidebarVisible }" class="bg-red-500 flex">
-    <div class="flex-1">
-      <h2 class="text-3xl font-semibold mt-8 mb-4">Cardápio</h2>
+    <div class="flex justify-center">
+      <h2 class="text-3xl font-semibold mt-8 mb-4">Segunda</h2>
+    </div>
+    <div>
       <div v-for="(dia, index) in diasSemana" :key="index">
         <h3 class="text-xl font-semibold mt-4">{{ dia.nome }}</h3>
         <ul>
@@ -11,19 +13,12 @@
         </ul>
       </div>
     </div>
+    
   </div>
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import SidebarMenu from "@/components/SidebarMenu.vue";
-
 export default {
-  components: {
-    Header,
-    SidebarMenu,
-  },
-
   props: {
     isSidebarVisible: Boolean,
   },
@@ -39,14 +34,26 @@ export default {
           nome: "Terça",
           pratos: ["Prato A", "Prato B", "Prato C"],
         },
+        {
+          nome: "Quarta",
+          pratos: ["Prato A", "Prato B", "Prato C"],
+        },
+        {
+          nome: "Quinta",
+          pratos: ["Prato A", "Prato B", "Prato C"],
+        },
+        {
+          nome: "Sexta",
+          pratos: ["Prato A", "Prato B", "Prato C"],
+        },
         // Adicione os demais dias da semana com seus respectivos pratos
       ],
     };
   },
   methods: {
-    teste(){
-      console.log("teste cardapio")
-    }
+    teste() {
+      console.log("teste cardapio");
+    },
   },
 };
 </script>

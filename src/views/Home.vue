@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="h-screen">
     <Header @toggle-sidebar="toggleSidebar" />
     <SidebarMenu :visible="isSidebarVisible" @close="closeSidebar" />
     <Cardapio :isSidebarVisible="isSidebarVisible" />
