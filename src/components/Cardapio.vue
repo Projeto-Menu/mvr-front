@@ -1,9 +1,9 @@
 <template>
-  <div :class="{ 'ml-60': isSidebarVisible }" class="bg-red-500 flex">
-    <div class="flex justify-center">
+  <div :class="{ 'ml-60': isSidebarVisible }" class="flex flex-col">
+    <div class="flex justify-center bg-blue-400">
       <h2 class="text-3xl font-semibold mt-8 mb-4">Segunda</h2>
     </div>
-    <div>
+    <div class="flex justify-center gap-36">
       <div v-for="(dia, index) in diasSemana" :key="index">
         <h3 class="text-xl font-semibold mt-4">{{ dia.nome }}</h3>
         <ul>
@@ -13,12 +13,17 @@
         </ul>
       </div>
     </div>
-    
   </div>
 </template>
 
 <script>
+import Carousel from 'primevue/carousel';
+
 export default {
+
+  components:{
+    Carousel,
+  },
   props: {
     isSidebarVisible: Boolean,
   },
@@ -27,24 +32,30 @@ export default {
     return {
       diasSemana: [
         {
-          nome: "Segunda",
-          pratos: ["Prato 1", "Prato 2", "Prato 3"],
+          nome: "Alomoço",
+          pratos: [
+            "Prato principal",
+            "Vegetariano",
+            "Guarnição",
+            "Complemento",
+            "Saladas Crua	",
+            "Salada Cozida	",
+            "Sobremesa",
+            "Bebida",
+          ],
         },
         {
-          nome: "Terça",
-          pratos: ["Prato A", "Prato B", "Prato C"],
-        },
-        {
-          nome: "Quarta",
-          pratos: ["Prato A", "Prato B", "Prato C"],
-        },
-        {
-          nome: "Quinta",
-          pratos: ["Prato A", "Prato B", "Prato C"],
-        },
-        {
-          nome: "Sexta",
-          pratos: ["Prato A", "Prato B", "Prato C"],
+          nome: "Janta",
+          pratos: [
+            "Prato principal",
+            "Vegetariano",
+            "Guarnição",
+            "Complemento",
+            "Saladas Crua	",
+            "Salada Cozida	",
+            "Sobremesa",
+            "Bebida",
+          ],
         },
         // Adicione os demais dias da semana com seus respectivos pratos
       ],
