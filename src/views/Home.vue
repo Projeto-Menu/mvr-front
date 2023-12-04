@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen">
+  <div class="h-screen bg-[#ecedd5]">
     <Header @toggle-sidebar="toggleSidebar" />
     <SidebarMenu :visible="isSidebarVisible" @close="closeSidebar" />
     <Cardapio :isSidebarVisible="isSidebarVisible" />
@@ -20,7 +20,6 @@ export default {
   data() {
     return {
       isSidebarVisible: false,
-      
     };
   },
   methods: {

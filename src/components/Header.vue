@@ -1,6 +1,6 @@
 <template>
-  <header class="bg-blue-800 text-white h-16 flex items-center pl-5">
-      <button @click="toggleSidebar" class="text-xl text-green-400">
+  <header class="bg-[#61d4b0] text-white h-16 flex items-center pl-5">
+      <button @click="toggleSidebar" class="text-xl">
         &#9776;
       </button>
       <router-link to="/" class="text-xl font-bold ml-2">My Menu</router-link>
