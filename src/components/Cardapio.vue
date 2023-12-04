@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ 'ml-60': isSidebarVisible }">
+  <div :class="{ 'ml-72': isSidebarVisible }">
     <Carousel
       :value="cardapio"
       :numVisible="1"
@@ -9,35 +9,35 @@
     >
       <template #item="dia">
         <div class="flex justify-center items-center rounded-3xl bg-[#baf77c] my-3">
-          <h2 class="text-3xl font-semibold my-4 text-green-600">
+          <h2 class="text-4xl font-semibold my-4 text-green-700">
             {{ dia.data.diaDaSemana }}
           </h2>
         </div>
         <div class="flex m-2">
           <Fieldset
             legend="Almoço"
-            class="border-4 flex-auto p-4 text-2xl mx-1"
+            class="border-4 flex-auto p-4 text-3xl text-[#2d2d29] font-semibold mx-1 border-[#75a480]"
           >
             <div
               v-for="categoria in dia.data.pratosAlmoco"
               :key="categoria.nome"
-              class="flex flex-col"
+              class="flex flex-col "
             >
-              <span class="text-xl">{{ categoria.categoria }}:</span>
-              <span class="text-lg mx-5">{{ categoria.nome }}</span>
+              <span class="text-2xl font-medium">{{ categoria.categoria }}:</span>
+              <span class="text-xl mx-5 font-light">{{ categoria.nome }}</span>
             </div>
           </Fieldset>
           <Fieldset
             legend="Jantar"
-            class="border-4 flex-auto p-4 text-2xl mx-1"
+            class="border-4 flex-auto p-4 text-3xl text-[#2d2d29] font-semibold mx-1 border-[#75a480]"
           >
             <div
               v-for="categoria in dia.data.pratosJanta"
               :key="categoria.nome"
               class="flex flex-col"
             >
-              <span class="text-xl">{{ categoria.categoria }}</span>
-              <span class="text-lg mx-5">{{ categoria.nome }}</span>
+            <span class="text-2xl font-medium">{{ categoria.categoria }}:</span>
+              <span class="text-xl mx-5 font-light">{{ categoria.nome }}</span>
             </div>
           </Fieldset>
         </div>

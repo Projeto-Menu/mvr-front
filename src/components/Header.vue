@@ -1,9 +1,9 @@
 <template>
-  <header class="bg-[#61d4b0] text-white h-16 flex items-center pl-5">
-      <button @click="toggleSidebar" class="text-xl">
+  <header class="bg-[#0a3740] text-white h-20 flex items-center pl-5">
+      <button @click="toggleSidebar" class="text-3xl">
         &#9776;
       </button>
-      <router-link to="/" class="text-xl font-bold ml-2">My Menu</router-link>
+      <router-link to="/" class="font-bold ml-4 text-3xl">My Menu</router-link>
       <SidebarMenu :visible="sidebarVisible"/>
   </header>
 </template>
