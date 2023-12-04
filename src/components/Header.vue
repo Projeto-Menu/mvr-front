@@ -1,33 +1,31 @@
 <template>
-  <header class="bg-blue-500 text-white p-4">
-    <div class="container mx-auto flex items-center justify-between">
-      <div class="flex items-center">
-        <!-- <Image
-          src="../assets/imgs/logoMymenu.png"
-          alt="LogoMyMenu"
-          class="w-10 h-10 mr-2"
-        /> -->
-        <router-link to="/" class="text-xl font-bold"
-          >My Menu</router-link
-        >
-      </div>
-
-      <nav>
-        <ul class="flex space-x-4">
-          <li><router-link to="/cardapio">Cardápio</router-link></li>
-          <li><router-link to="/sobre">Sobre Nós</router-link></li>
-          <li><router-link to="/contato">Contato</router-link></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="bg-[#0a3740] text-white h-20 flex items-center pl-5">
+      <button @click="toggleSidebar" class="text-3xl">
+        &#9776;
+      </button>
+      <router-link to="/" class="font-bold ml-4 text-3xl">My Menu</router-link>
+      <SidebarMenu :visible="sidebarVisible"/>
   </header>
 </template>
 
 <script>
-import Image from 'primevue/image';
+import SidebarMenu from "@/components/SidebarMenu.vue";
+
 export default {
   components: {
-    Image,
+    SidebarMenu,
+  },
+  data() {
+    return {
+      sidebarVisible: false,
+    };
+  },
+  methods: {
+    toggleSidebar() {
+      this.sidebarVisible = !this.sidebarVisible;
+      this.$emit("toggle-sidebar");
+    },
   },
 };
 </script>
+

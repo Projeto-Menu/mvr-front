@@ -2,11 +2,11 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
-    path: '/cardapio',
-    name: "Cardapio",
-    component: () => import("@/views/Cardapio.vue"),
+    path: '/',
+    name: "home",
+    component: () => import("@/views/Home.vue"),
     meta: {
-      name: "Cardapio",
+      name: "Home",
     },
   },
   {
