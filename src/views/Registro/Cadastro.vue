@@ -1,9 +1,8 @@
 <template>
   <div class="min-h-screen flex flex-col">
-    <Header />
     <form
       @submit.prevent="submitForm"
-      class="flex-1 flex items-center justify-center bg-gray-100"
+      class="flex-1 flex items-center justify-center bg-[#baf77c]"
     >
       <div class="bg-white p-8 rounded shadow-md w-96">
         <h2 class="text-2xl font-semibold mb-4">Cadastro</h2>
@@ -46,7 +45,7 @@
 import InputText from "primevue/inputtext";
 import Button from "primevue/button";
 import InputWrapper from "../../components/InputWrapper.vue";
-import { create } from "../../services/Resgistro";
+import { create, findAll, find } from "../../services/Resgistro";
 
 export default {
   components: {
@@ -70,10 +69,14 @@ export default {
       try {
         const criando = await create(this.form);
         console.log(criando);
+        this.showSuccess = true; 
+        this.$router.push({ name: "Login" });
       } catch (error) {
+        this.showError = true;
         console.error(error);
       } finally {
         console.log("Finalizou");
+        findAll();
       }
     },
   },
