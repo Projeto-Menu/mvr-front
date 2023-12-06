@@ -94,7 +94,6 @@ export default {
   },
   methods: {
     async atualizar(diaAtual) {
-      console.log(this.diasfuncionamento.data_dia)
       this.pratosAlmoco = await this.listCardapio(
         this.diasfuncionamento[diaAtual + 1].id_almoco
       );
@@ -107,7 +106,6 @@ export default {
     },
     async ajusteTime(value) {
       let dataFormatada = await moment(value).format("L");
-      console.log(dataFormatada);
       return dataFormatada;
     },
     async listDiasFuncionamento() {

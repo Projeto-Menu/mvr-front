@@ -1,6 +1,6 @@
 <template>
   <div :class="{ 'ml-72': isSidebarVisible }">
-      <div class="max-w-4xl my-2 mx-auto rounded-md p-4 bg-[#baf77c]">
+      <div class="max-w-4xl my-4 mx-auto rounded-md p-4 bg-[#baf77c]">
         <h2 class="text-2xl font-semibold mb-4">Dicas para o RU</h2>
 
         <div class="dica mb-8 p-6 bg-white rounded-md shadow-md">
