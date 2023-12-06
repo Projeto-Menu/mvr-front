@@ -4,7 +4,6 @@
         &#9776;
       </button>
       <router-link to="/" class="font-bold ml-4 text-3xl">My Menu</router-link>
-      <SidebarMenu :visible="sidebarVisible"/>
   </header>
 </template>
 
